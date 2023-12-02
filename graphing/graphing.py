@@ -61,7 +61,6 @@ def graphGaussianNaiveBayesRegression(test_x, test_y, label_type, verbose):
     sns.regplot(x=df[column], y=test_y, data=df, ax=axs[row_index][column_index], label=COLUMNS_WITHOUT_PRICE_RANGE[row_index * 4 + column_index], color='blue', line_kws={'color': 'red'})
     plt.ylabel('Price Range')
     plt.xlabel('')
-    plt.tight_layout()
 
     if (column_index == 3):
       column_index = 0
@@ -97,7 +96,6 @@ def graphKNearestNeighborsRegression(test_x, test_y, label_type, k, verbose):
     )
     plt.ylabel('Price Range')
     plt.xlabel('')
-    plt.tight_layout()
 
     if (column_index == 3):
       column_index = 0
@@ -122,10 +120,17 @@ def graphLinearRegression(test_x, test_y, label_type, verbose):
   row_index = 0
 
   for column in df:
-    sns.regplot(x=df[column], y=test_y, data=df, ax=axs[row_index][column_index], label=COLUMNS_WITHOUT_PRICE_RANGE[row_index * 4 + column_index], color='blue', line_kws={'color': 'red'})
+    sns.regplot(
+      x=df[column],
+      y=test_y,
+      data=df,
+      ax=axs[row_index][column_index],
+      label=COLUMNS_WITHOUT_PRICE_RANGE[row_index * 4 + column_index],
+      color='blue',
+      line_kws={'color': 'red'}
+    )
     plt.ylabel('Price Range')
     plt.xlabel('')
-    plt.tight_layout()
 
     if (column_index == 3):
       column_index = 0
@@ -153,7 +158,6 @@ def graphLogisticRegression(test_x, test_y, label_type, verbose):
     sns.regplot(x=df[column], y=test_y, data=df, ax=axs[row_index][column_index], label=COLUMNS_WITHOUT_PRICE_RANGE[row_index * 4 + column_index], logistic=True, color='blue', line_kws={'color': 'red'})
     plt.ylabel('Price Range')
     plt.xlabel('')
-    plt.tight_layout()
 
     if (column_index == 3):
       column_index = 0

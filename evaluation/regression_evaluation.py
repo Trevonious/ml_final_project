@@ -1,7 +1,7 @@
 import numpy as np
-from sklearn import preprocessing
 import sklearn.metrics as metrics
 from constants import GAUSSIAN_NAIVE_BAYES, K_NEAREST_NEIGHBORS, LINEAR, LOGISTIC
+from sklearn import preprocessing
 from sklearn.discriminant_analysis import StandardScaler
 from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.naive_bayes import GaussianNB
